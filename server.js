@@ -1,16 +1,17 @@
 const { default: mongoose } = require("mongoose");
 const app = require("./app");
 
-mongoose.set('strictQuery', false);
+
 
 require('dotenv').config({path: 'variables.env'});
-
+/*
 //conexão banco de dados
 mongoose.connect(process.env.DATABASE, {useNewUrlParser : true, useUnifiedTopology : true});
 mongoose.Promise = global.Promise;
 mongoose.connection.on('error', (error) => {
     console.error("ERROR: "+ error.message);
 });
+mongoose.set('strictQuery', false);*/
 
 app.set('port', process.env.PORT || 7777);
 
